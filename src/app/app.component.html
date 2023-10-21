@@ -6,9 +6,9 @@
       <form [formGroup]="passwordForm">
         <div class="form-group">
           <input type="password" formControlName="password" class="form-control" autocomplete="off" placeholder="Password">
-          <app-password-strength [passwordToCheck]="passwordForm.value.password"></app-password-strength>
+          <app-password-strength [passwordToCheck]="passwordForm.value.password" (passwordStrength)="passwordValid($event)"></app-password-strength>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary submit-btn" [disabled]="!passwordIsValid">
           Submit
         </button>
       </form>

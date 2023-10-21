@@ -5,15 +5,9 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PasswordStrengthComponent } from './password-strength/password-strength.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    PasswordStrengthComponent
-  ],
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule
-  ],
+  declarations: [AppComponent, PasswordStrengthComponent],
+  imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

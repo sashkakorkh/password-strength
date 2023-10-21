@@ -8,11 +8,14 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 export class AppComponent implements OnInit {
   passwordForm!: FormGroup;
+  passwordIsValid = false;
   constructor(private fb: FormBuilder) {}
   ngOnInit() {
-    console.log(this.passwordForm);
     this.passwordForm = this.fb.group({
       password: ['', Validators.required],
     });
+  }
+  passwordValid(event: boolean) {
+    this.passwordIsValid = event;
   }
 }
